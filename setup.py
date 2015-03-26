@@ -52,12 +52,12 @@ setup(
     name=NAME,
     version=growler_vhost.__version__,
     author=growler_vhost.__author__,
-    license="Apache v2.0",
+    license=growler_vhost.__license__,
     url=growler_vhost.__version__,
-    author_email="andrew.kubera@gmail.com",
+    author_email=growler_vhost.__contact__,
     description=desc,
     long_description=description,
     classifiers=CLASSIFIERS
     install_requires = ['growler'],
-    packages = ['growler_indexer']
+    packages = ['growler_vhost']
 )
