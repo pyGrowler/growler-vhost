@@ -3,6 +3,7 @@
 #
 
 from setuptools import setup, find_packages
+from glob import glob
 
 import growler_vhost
 
@@ -42,5 +43,6 @@ setup(
     description=desc,
     classifiers=CLASSIFIERS
     install_requires=REQUIRES,
-    packages=find_packages(exclude=['tests'])
+    packages=find_packages(exclude=['tests']),
+    scripts=glob("scripts/*")
 )
