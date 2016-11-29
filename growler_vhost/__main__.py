@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# growler-vhost
+# growler_vhost/__main__.py
 #
 """
 Python executable which loads a configuration file and starts a growler server
