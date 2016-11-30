@@ -13,6 +13,7 @@ NAME = "growler-vhost"
 
 PACKAGES = [
     'growler_vhost',
+    'growler_ext',
 ]
 
 REQUIRES = [
