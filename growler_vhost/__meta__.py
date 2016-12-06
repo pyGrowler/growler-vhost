@@ -12,6 +12,6 @@ version = '.'.join(map(str, version_info))
 
 date = 'Nov 29, 2016'
 
-author  = 'Andrew Kubera'
+author = 'Andrew Kubera'
 author_email = 'andrew.kubera@gmail.com'
 license = 'Apache v2.0'

@@ -1,6 +1,8 @@
 #
 # growler_vhost/__init__.py
 #
+# flake8: noqa 
+#
 
 from .__meta__ import (
     version as __version__,
