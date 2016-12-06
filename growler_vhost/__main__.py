@@ -10,7 +10,8 @@ not been determined yet.
 
 import sys
 import logging
-from argparse import ArgumentParser
+from configparser import ConfigParser
+from argparse import ArgumentParser, FileType
 
 
 def parser():
@@ -22,6 +23,11 @@ def parser():
     parser.add_argument("--debug",
                         action='store_true',
                         help="Output debug information")
+    parser.add_argument("-c", "--config",
+                        type=FileType('r'),
+                        nargs='?',
+                        default=None,
+                        help="Configuration File")
     return parser
 
 
@@ -36,6 +42,10 @@ def main(argv=None):
 
     if args.debug:
         log.setLevel(logging.DEBUG)
+
+    config = ConfigParser()
+    if args.config:
+        config.read_file(args.config)
 
     s = "will" if args.daemonize else "will not"
     log.debug("Process %s daemonize", s)

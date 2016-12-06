@@ -37,7 +37,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.5",
     "Topic :: Internet :: WWW/HTTP",
     "Natural Language :: English"
-],
+]
 
 
 setup(
@@ -50,4 +50,9 @@ setup(
     classifiers=CLASSIFIERS,
     install_requires=REQUIRES,
     packages=PACKAGES,
+    entry_points={
+        'console_scripts': [
+            'growler-vhost = growler_vhost.__main__:main'
+        ]
+    },
 )
